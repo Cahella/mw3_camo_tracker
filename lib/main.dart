@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mw3_app/theme.dart';
-import 'Pages/main_Screen.dart';
+import 'package:mw3_app/config/theme.dart';
+import 'package:mw3_app/presentation/pages/main_screen.dart';
 
 void main() {
   runApp(MyApp());
