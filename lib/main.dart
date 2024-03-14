@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:mw3_app/config/theme.dart';
-import 'package:mw3_app/data/models/weapon_class_model.dart';
-import 'package:mw3_app/data/services/dbService.dart';
-import 'package:mw3_app/presentation/pages/main_screen.dart';
+import 'package:mw3_app/config/theme/theme.dart';
+import 'package:mw3_app/features/camotracker/data/models/weapon_class_model.dart';
+import 'package:mw3_app/features/camotracker/data/services/dbService.dart';
+import 'package:mw3_app/features/camotracker/presentation/pages/main_screen.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var wc = const WeaponClassModel(id: 0, name: 'Assault Rifle');
-  DbService.addWeaponClass(wc);
-  print(DbService.getAllWeaponClasses());
+  await DbService.addWeaponClass(wc);
+  print(await DbService.getAllWeaponClasses());
   runApp(MyApp());
   
 }

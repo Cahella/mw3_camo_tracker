@@ -1,4 +1,4 @@
-import 'package:mw3_app/data/models/weapon_class_model.dart';
+import 'package:mw3_app/features/camotracker/data/models/weapon_class_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'dart:async';
@@ -32,7 +32,13 @@ class DbService {
     if(maps.isEmpty) {
       return null;
     }
-
+    // return [
+    //   for (final {
+    //   'id': id as int,
+    //   'name': name as String,
+    //   } in maps)
+    //     WeaponClassModel(id: id, name: name,),
+    // ];
     return List.generate(maps.length, (index) => WeaponClassModel.fromJson(maps[index]));
   } 
 }
